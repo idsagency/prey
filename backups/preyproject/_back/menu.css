@@ -1,0 +1,641 @@
+
+
+/* -------------------------------------------------------------------*/
+/* 01.Settings
+/* -------------------------------------------------------------------*/
+@charset "UTF-8";
+/* for titles and body Titillium Web */
+@import 'https://fonts.googleapis.com/css?family=Titillium+Web:400,700';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    height: 1200px;
+    
+}
+
+/* Pray colors */
+.color-white {
+    color: white;
+}
+.color-primary {
+    color: #121824;
+}
+
+.color-secundary {
+    color: #3477bb;
+}
+
+.color-comp1 {
+    color: #f79748;
+}
+
+/* Fix Css for elements*/
+.positiom-relative {
+    position: relative;
+}
+.position-absolute {
+    position: absolute;
+}
+
+.clearfix::after {
+    content: “”;
+    clear: both;
+    display: table;
+}
+
+.margin-bottom-m {
+    padding-bottom: 10px
+}
+
+/* for test porpouse */
+.test {
+    border: 1px solid red;
+}
+
+/* padding and margin reset to 0*/
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+/* to the body element: aboid scroll on overlay or other fixed elements */
+.noscroll { overflow: hidden; }
+
+.overlay {
+    background: rgba(255,255,255,0.8);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    opacity: 0;
+    position: fixed;
+    transition: all .3s ease-in-out;
+    text-align:center;
+    z-index: 900;   
+}
+
+overlay.displayed {
+    opacity: 1 !important;
+    display: block !important;
+}
+
+
+/* -------------------------------------------------------------------*/
+/* 02.Typography
+/* -------------------------------------------------------------------*/
+
+/* titles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Titillium Web', sans-serif !important;
+}
+
+h1 {
+    font-size: 4rem !important;
+}
+
+h2 {
+    font-size: 2.836rem !important;
+}
+
+h3 {
+    font-size: 2.312rem !important;
+}
+
+h4 {
+    font-size: 2rem !important;
+}
+
+h5 {
+    font-size: 1.785rem !important;
+}
+
+h6 {
+    font-size: 1.632rem !important;
+}
+
+
+.lead { 
+    font-family: 'Titillium Web', sans-serif !important;
+}
+
+.lead-special-margin { 
+    margin-bottom: 0px !important;
+}
+
+.small-lead { 
+    font-size: 17px;
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 200; 
+    padding: 20px 0px 20px 0px;
+}
+
+.small-lead-no-padding {
+    padding: 0px 0px 20px 0px;
+}
+
+.smallest-lead { 
+    font-size: 15px;
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 200;
+}
+
+.smallest-lead-padding {
+    padding: 10px 0;
+}
+.x-smallest-lead {
+    font-size: 13px;
+    font-family: 'Titillium Web', sans-serif !important;
+    font-weight: 200;
+}
+
+.fnt-italic {
+    font-style: italic;
+}
+
+.fnt-uppercase {
+    text-transform: uppercase;
+}
+
+
+/* -------------------------------------------------------------------*/
+/* 03.Buttons and Ctas
+/* -------------------------------------------------------------------*/
+
+a.prey-links-pimary {
+    width: 172px;
+    height: 40px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;   
+    margin-top: 15px;
+    margin-left: -5px;
+}
+
+a.prey-links-pimary-big {
+    width: 300px;
+    height: 84px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    cursor: pointer;   
+    margin-left: -5px;
+}
+
+a.prey-links-pimary p, 
+a.prey-links-pimary-big p {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-size: 17px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all .3s ease-out;
+    
+}
+ 
+a.prey-links-pimary:hover > p,
+a.prey-links-pimary-big:hover > p
+{ 
+    color: #fff;
+}
+
+.prey-links-pimary-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width:172px; 
+    height: 40px;
+}
+
+.prey-links-pimary-big-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width:300px; 
+    height: 84px;
+}
+
+.prey-links-pimary-polygon {
+    transition: all .3s ease-out; 
+    stroke-width: 2;
+    display: block;
+}
+
+a.prey-links-pimary:hover .prey-links-pimary-polygon,
+a.prey-links-pimary-big:hover .prey-links-pimary-polygon {
+    fill: #3477bb;
+    stroke: #fff;
+}
+
+a.prey-links {
+    width: 152px;
+    height: 34px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;    
+}
+
+a.prey-links p {
+    font-family: 'Titillium Web', sans-serif !important;
+    font-size: 15px;
+    color: #121824;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: all .3s ease-out;
+}
+ 
+a.prey-links:hover > p { 
+    color: #fff;
+}
+
+.prey-links-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.prey-links-bg-polygon {
+    transition: all .3s ease-out; 
+    stroke-width: 2;
+    display: block;
+}
+
+a.prey-links:hover .prey-links-bg-polygon {
+    fill: #3477bb;
+    stroke: #fff;
+}
+
+
+
+/* The calculator */
+.btn-calculator {
+        margin-top: 25px;
+        margin-left: 32px;
+        width: 185px;
+    }
+
+    .btn-calculator-bg {
+        transition: all .2s ease-in-out;
+    }
+
+    .btn-calculator-bg:hover {
+        fill: #ec8e36;
+
+    }
+
+
+/* -------------------------------------------------------------------*/
+/* 04.Navigation
+/* -------------------------------------------------------------------*/
+
+
+header{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 55px;
+    color: #fff;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    z-index:1000;
+    background: rgba(255,255,255,.8);
+}
+
+    .wrap-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .branding {
+        width: 100%;
+        float: left;
+        text-align: left;
+        transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;    
+    }
+
+        .logo-lg {
+            max-width: 150px;
+            margin-top: 10px;
+            padding-left: 15px;
+            float: right;
+        }
+
+    .menu {
+        width: 50%;
+        float: left;
+        text-align: right;
+        padding-top: 10px;
+        display: none;
+    }
+
+/* 
+==================================================
+- The Menu Button
+==================================================
+*/
+
+
+#mobileButton {
+  width: 40px;
+  height: 45px;
+    margin-top: 12px;
+    
+  position: relative;
+float: left;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#mobileButton span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: #121824;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+
+#mobileButton span:nth-child(1) {
+  top: 0px;
+}
+
+#mobileButton span:nth-child(2),#mobileButton span:nth-child(3) {
+  top: 12px;
+}
+
+#mobileButton span:nth-child(4) {
+  top: 24px;
+}
+
+#mobileButton.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+  left: 50%;
+}
+
+#mobileButton.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#mobileButton.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#mobileButton.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+/* 
+==================================================
+- The Mobile Menu
+==================================================
+*/
+
+.mobileMenu { 
+    width: 275px;
+    height: 100vh;
+    position: fixed;
+    top: 57px;
+    left: 0;
+    background: rgba(255,255,255,.8);
+    z-index: 1200;
+    transition: all .3s ease-in-out;   
+    overflow: scroll;
+}
+
+    .slideOut { 
+        margin-left: -275px;
+        transition: all .3s ease-in-out;
+    }
+
+    .slideIn { 
+        margin-right: 0px;
+    }
+
+    .mobileMenu .separator {
+        border-bottom: 1px dashed #b7b7b7;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+/* The Menu Container */
+.mobileMenu-container {
+    width: 250px;
+    display: inline-block;
+    position: relative;
+    float: right;
+    height: 100vh;
+    padding-top: 30px;
+    font-family: 'Titillium Web', sans-serif !important;
+}
+
+    .mobileMenu-container::before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 100vh;
+        display: block;
+        background-color: #f2eeec;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        
+    }
+
+    .mobileMenu-container h6{
+        color: #9b9b9b;
+    }
+
+    .mobileMenu-panel {
+        padding: 25px 0;
+        text-align: center;
+    }
+
+        .mobileMenu-panel a:last-child {
+            margin-top: 5px;
+        }
+
+
+    .mobileMenu ul {
+        list-style: none;
+        padding-left: 0px;
+        padding-top: 25px;
+    }
+
+    .mobileMenu li { 
+        padding: 5px 0;
+    }
+
+    .mobileMenu li a { 
+        color: #121824;
+        display: block;
+        height: 30px;
+        padding: 0 32px;
+        /* CSS Transition */
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+        -ms-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        border-left: 8px solid transparent;
+        margin-bottom: 5px;
+    }
+
+    .mobileMenu li a p { 
+        font-size: 15px;
+        padding-bottom: 6px;
+    }
+
+    .mobileMenu li a:hover {
+        color: #3477bb;
+        text-decoration: none;
+    }
+
+
+    .mobileMenu li a.active {
+        border-left: 8px solid #3477bb;
+    }
+
+    .mobileMenu li a.active p{
+        border-bottom: 1px dashed #b7b7b7;
+    }
+/*
+==================================================
+- Media Query Mobile First Aproach for menu
+==================================================
+*/
+
+@media (min-width:769px) {
+    .wrap-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .branding {
+        width: 50%;
+    }
+
+        .logo-lg {
+            float: left ;
+        }
+
+    .menu {
+        width: 50%;
+        display: inline;
+    }
+}
+
+/* -------------------------------------------------------------------*/
+/* 09.Animated Elements
+/* -------------------------------------------------------------------*/
+
+/* for animate.css */
+.os-animation{
+  opacity: 0;
+}
+ 
+.os-animation.animated{
+    opacity: 1;
+}
+
+.duration-1s {
+    -webkit-animation-duration:1s;
+    -moz-animation-duration:1s;
+    -ms-animation-duration:1s;
+    -o-animation-duration:1s;
+    animation-duration:1s;
+}
+
+.duration-2s {
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    -ms-animation-duration:2s;
+    -o-animation-duration:2s;
+    animation-duration:2s;
+}
+
+.duration-3s {
+    -webkit-animation-duration:3s;
+    -moz-animation-duration:3s;
+    -ms-animation-duration:3s;
+    -o-animation-duration:3s;
+    animation-duration:3s;
+}
+
+.delay-1s {
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s;
+}
+
+.delay-2s {
+    -webkit-animation-delay:2s;
+    -moz-animation-delay:2s;
+    -ms-animation-delay:2s;
+    -o-animation-delay:2s;
+    animation-delay:2s;
+}
+
+.delay-3s {
+    -webkit-animation-delay:3s;
+    -moz-animation-delay:3s;
+    -ms-animation-delay:3s;
+    -o-animation-delay:3s;
+    animation-delay:3s;
+}
